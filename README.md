@@ -25,8 +25,19 @@ uploads.github.com
 objects.githubusercontent.com www.objects.githubusercontent.com release-assets.githubusercontent.com gist.githubusercontent.com repository-images.githubusercontent.com camo.githubusercontent.com private-user-images.githubusercontent.com avatars0.githubusercontent.com avatars1.githubusercontent.com avatars2.githubusercontent.com avatars3.githubusercontent.com cloud.githubusercontent.com desktop.githubusercontent.com support.github.com
 support-assets.githubassets.com github.githubassets.com opengraph.githubassets.com github-registry-files.githubusercontent.com github-cloud.githubusercontent.com
 ```
-Example:
-# /etc/hosts
+
+Exmpore
+
+```bash
+#### /etc/hosts
 1.1.1.1 one.one.one.one
+```
 
+## build&Debug
 
+```bash
+docker compose up -d
+docker compose up -d --force-recreate
+docker compose logs -f
+tcpdump -n -i any port 443 and ip6
+```
