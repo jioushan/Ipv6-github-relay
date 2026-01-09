@@ -1,6 +1,6 @@
 # An IPv6 Environment GitHub Proxy — Using Docker
 ## 1.This project runs on a single-stack IPv6 VM.
-If you are using a dual-stack network, please replace the following line in the nginx.config file:
+If you are using a dual-stack network, please changes the following line in the `nginx.config` file:
 ```bash
     resolver [2001:4860:4860::6464] [2001:4860:4860::6444] ipv6=on;
 to 
@@ -14,8 +14,8 @@ to
 This project is intended for any IPv6 single-stack server/device to solve issues where GitHub-related resources are inaccessible.
 
 ## 4. How to use
-   For Linux users, please modify your hosts file to resolve the following domains to your dual-stack network IP address:
-```
+   For Linux system, please modify your hosts file to resolve the following domains to your dual-stack network IP address:
+```bash
 github.com
 api.github.com
 codeload.github.com
