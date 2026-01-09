@@ -1,0 +1,13 @@
+services:
+  nginx-relay:
+    image: nginx:latest
+    container_name: github-ipv6-relay
+    restart: always
+    # "host" network mode is crucial for IPv6 transparency and performance.
+    # It allows Nginx to bind directly to the host's IPv6 interface.
+    network_mode: "host"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    # Note: When using network_mode: "host", the 'ports' mapping is ignored 
+    # because the container shares the host's networking namespace.
+    # The ports are defined strictly in nginx.conf 'listen' directives.
