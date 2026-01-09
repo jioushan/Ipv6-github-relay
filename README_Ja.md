@@ -14,7 +14,7 @@
 ## 4. 使用方法
    Linux ユーザーは、以下のドメインを デュアルスタックネットワークの IP アドレス に向けて `hosts` ファイルを設定してください。
    
-```
+```bash
 github.com
 api.github.com
 codeload.github.com
@@ -25,7 +25,17 @@ objects.githubusercontent.com www.objects.githubusercontent.com release-assets.g
 support-assets.githubassets.com github.githubassets.com opengraph.githubassets.com github-registry-files.githubusercontent.com github-cloud.githubusercontent.com
 ```
 れい:
-# /etc/hosts
+
+```bash
+#### /etc/hosts
 1.1.1.1 one.one.one.one
+```
 
+## build&Debug
 
+```bash
+docker compose up -d
+docker compose up -d --force-recreate
+docker compose logs -f
+tcpdump -n -i any port 443 and ip6
+```
