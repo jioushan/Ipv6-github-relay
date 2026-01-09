@@ -27,14 +27,14 @@ support-assets.githubassets.com github.githubassets.com opengraph.githubassets.c
 
 ```
 
-Exmpore
+Exmpore:
 
 ```bash
 #### /etc/hosts
 1.1.1.1 one.one.one.one
 ```
 
-## 部屬&Debug
+## build&Debug
 
 ```bash
 docker compose up -d
